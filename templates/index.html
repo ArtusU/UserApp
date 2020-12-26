@@ -2,7 +2,11 @@
 
 
 {% block content %}
-    <h1>Hello {{request.user|title}}</h1>
+    <div>
+        {% for user in users %}
+            <h4>User: {{user|title}} - {{user.email}} - {{user.date_joined}}</h4>
+        {% endfor %}
+    </div>
 {% endblock content %}
         
         
